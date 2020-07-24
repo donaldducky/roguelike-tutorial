@@ -39,9 +39,9 @@ end::place_objects_rand_pos[]
 
         let mut monster = if rand::random::<f32>() < 0.8 {  // 80% chance of getting an orc
             // create an orc
-            Object::new(x, y, 'o', colors::DESATURATED_GREEN)
+            Object::new(x, y, 'o', DESATURATED_GREEN)
         } else {
-            Object::new(x, y, 'T', colors::DARKER_GREEN)
+            Object::new(x, y, 'T', DARKER_GREEN)
         };
 
         objects.push(monster);
@@ -406,7 +406,7 @@ end::is_blocked_check[]
 }
 ----
 
-That means we now have to pass the `map` to `place_objcets` as well:
+That means we now have to pass the `map` to `place_objects` as well:
 
 [source]
 ----
@@ -417,7 +417,7 @@ end::place_objects_header[]
 }
 ----
 
-And of course we have to pass `map` when we call `place_objecs` in
+And of course we have to pass `map` when we call `place_objects` in
 `make_map` too:
 
 [source]
