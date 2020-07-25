@@ -468,9 +468,9 @@ the options.
 (Key { code: Text, .. }, "i", true) => {
     // show the inventory
     inventory_menu(
-        inventory,
+        &game.inventory,
         "Press the key next to an item to use it, or any other to cancel.\n",
-        root);
+        &mut tcod.root);
     TookTurn
 }
 ----
