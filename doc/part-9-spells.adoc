@@ -200,17 +200,6 @@ This is still an enum, but it uses a struct-like enum variant for
 `Confused`. In Rust, enums variants aren't just empty identifiers, but
 can hold data, too!
 
-We need to change the monster creation in `place_objects` a little:
-
-[source]
-----
-// create an orc
-orc.ai = Some(Ai::Basic);
-// ...
-// create a troll
-troll.ai = Some(Ai::Basic);
-----
-
 Next, let's move the code from `ai_take_turn` to its own function:
 
 [source]
